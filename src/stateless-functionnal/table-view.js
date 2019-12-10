@@ -13,9 +13,7 @@ const getProjection = (item) => {
 
 const isSearched = (target) => (pattern) => target.toLowerCase().includes(pattern.toLowerCase());
 
-const TableView = (props) => {
-	const { pattern, list } = props;
-
+const TableView = ({ pattern, list }) => {
 	return list
 		.filter((item) => isSearched(getProjection(item))(pattern))
 		.map((item) => <div key={item.id}>{getProjection(item)}</div>);

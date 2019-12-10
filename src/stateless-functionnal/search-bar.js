@@ -1,8 +1,6 @@
 import React from 'react';
 
-const SearchBar = (props) => {
-	const { value, onChange, children } = props;
-
+const SearchBar = ({ value, onChange, children }) => {
 	return (
 		<div>
 			{children}
